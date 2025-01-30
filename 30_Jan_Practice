@@ -1,0 +1,15 @@
+1.Query all attributes of every Japanese city in the CITY table. The COUNTRYCODE for Japan is JPN.
+
+solution:
+
+select * from city where countrycode = 'JPN';
+
+2.Query all columns (attributes) for every row in the CITY table.
+
+solution :
+select * from city;
+
+3.Query all columns for a city in CITY with the ID 1661.
+
+solution:
+select * from city where ID = 1661;
