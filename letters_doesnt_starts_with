@@ -1,0 +1,10 @@
+Query the list of CITY names from STATION that do not start
+with vowels. Your result cannot contain duplicates.
+
+solution
+
+SELECT DISTINCT(CITY) FROM STATION
+WHERE LOWER(CITY) NOT LIKE 'a%' AND LOWER(CITY) NOT LIKE 'e%' 
+and LOWER(CITY)
+not like 'i%' and LOWER(CITY) not like 'o%' and LOWER(CITY)
+not like 'u%';
