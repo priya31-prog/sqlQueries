@@ -1,0 +1,18 @@
+Consider p1(a,c) and p2(b,d) to be two points on a 2D plane where
+(a,b) are the respective minimum and maximum values of Northern Latitude 
+(LAT_N) and (c,d) are the respective minimum and maximum values of 
+Western Longitude (LONG_W) in STATION.
+
+Query the Euclidean Distance between points p1 and p2  and
+format your answer to display  decimal digits.
+
+solution
+
+select round(sqrt(power((a-b),2)+ power((c-d),2)),4) as result 
+from(
+    select
+    (select min(lat_n) from station) as a,
+    (select max(lat_n) from station) as b,
+    (select min(long_w) from station) as c,
+    (select max(long_w) from station) as d
+)as subquery;
