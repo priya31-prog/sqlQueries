@@ -1,0 +1,16 @@
+TRIANGLE PATTERN: (1-20)
+
+
+
+DELIMITER //
+
+CREATE PROCEDURE PrintOrder()
+BEGIN
+    DECLARE points INT DEFAULT 1;
+    WHILE points <=20 DO
+        SELECT REPEAT('* ',points);
+        SET points = points +1;
+    END WHILE;
+END //
+
+DELIMITER ;
